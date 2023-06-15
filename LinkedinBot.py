@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from selenium.common.exceptions import NoSuchElementException
 from linkedinpassword import password
+from linkedinpassword import username
 
 options = Options()
 options.add_experimental_option('detach', True)
@@ -18,7 +19,7 @@ signin_button.click()
 time.sleep(2)
 
 email_field = driver.find_element(By.ID, "username")
-email_field.send_keys("clintonnmereole@gmail.com")
+email_field.send_keys(username)
 time.sleep(2)
 
 password_field = driver.find_element(By.ID, "password")
